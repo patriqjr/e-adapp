@@ -18,12 +18,14 @@ class MainActivity : AppCompatActivity() {
                     moveToFragment(AboutFarmerFragment())
                     return
                 }
+
                 1 -> {
                     moveToFragment(EditFarmerFragment())
                     return
                 }
+
                 2 -> {
-                    moveToFragment(EditFarmerFragment())
+                    moveToFragment(ItemThreeFragment())
                     return
                 }
             }
@@ -42,9 +44,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Item one"),true)
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Item two"),false)
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Item three"),false)
+        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Item one"), true)
+        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Item two"), false)
+        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Item three"), false)
         binding.tabLayout.setOnTabSelectedListener(tabListener)
         moveToFragment(AboutFarmerFragment())
     }
